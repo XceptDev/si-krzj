@@ -25,9 +25,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-effect shadow-lg shadow-black/50" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all glass-effect shadow-lg shadow-black/50`}
     >
       <div className="container mx-auto px-4 py-5">
         <div className="flex items-center justify-between">
@@ -35,7 +33,7 @@ export default function Navigation() {
             XceptDev
           </a>
 
-          {/* Desktop Navigation */}
+          
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
@@ -48,7 +46,7 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+
           <Button
             variant="ghost"
             size="icon"
@@ -67,7 +65,6 @@ export default function Navigation() {
           </Button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-6 pb-4 flex flex-col gap-4 glass-effect rounded-xl p-4">
             {navItems.map((item) => (
